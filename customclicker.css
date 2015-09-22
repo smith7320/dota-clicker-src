@@ -1,0 +1,61 @@
+body {
+	background-color: #222;
+}
+
+
+#firstInfo {
+	display: none;
+	background-color: #202;
+}
+
+/* css for window sections */
+.mainWindow {
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.buttonsWindow {
+	padding-top: 30px;
+}
+
+.buttonsWindow2 {
+	text-align: right;
+	padding-top: 30px;
+}
+
+/* css for buttons */
+.buttonFont {
+	letter-spacing: 2px;
+	font: bold 28px impact, sans-serif;
+}
+
+.btn {
+	text-align: left;
+}
+
+.btn > img {
+	display: inline;
+}
+
+.btn > p {
+	display: inline;
+	font: bold 17px impact, sans-serif;
+}
+
+/* css for footer of page */
+.footer {
+	color: #fff;
+	position: absolute;
+	width: 100%;
+	bottom: 3px;
+}
+
+.footer > hr {
+	position: relative;
+	width: 100%;
+}
+
+.footer > a {
+	position: relative;
+	padding-left: 5px;
+}
