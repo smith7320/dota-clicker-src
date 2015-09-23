@@ -2,10 +2,32 @@ body {
 	background-color: #222;
 }
 
+.mainFont {
+	letter-spacing: 2px;
+	text-align: center;
+	font: 20px impact, sans-serif;
+	color: #fff;
+	text-shadow: 2px 2px #000;
+}
 
-#firstInfo {
+.clickerImage {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	cursor: pointer;
+    transition: width 0.3s, height 0.3s;
+}
+
+.clickerImage:active {
+    width: 200px;
+    height: 200px;
+}
+
+/* css for info blocks */
+#firstInfo, #secondInfo {
 	display: none;
-	background-color: #202;
+	color: #fff;
+	background-color: #000;
 }
 
 /* css for window sections */
