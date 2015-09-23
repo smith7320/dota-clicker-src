@@ -69,9 +69,6 @@ Game.Init = function() {
 		
 		if (clicks >= secondCost) { document.getElementById("button2").className = "btn btn-default btn-block"; } 
 		else { document.getElementById("button2").className = "btn btn-default btn-block disabled"; }
-		
-		if (clicks >= clickPowerCost1) { document.getElementById("buttonA").className = "btn btn-default"; } 
-		else { document.getElementById("buttonA").className = "btn btn-default disabled"; }
 	}
 
 	Game.firstButton = function() {
