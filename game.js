@@ -21,7 +21,7 @@ function rollNumbers(id, start, end, duration) {
         var now = new Date().getTime();
         var remaining = Math.max((endTime - now) / duration, 0);
         var value = Math.round(end - (remaining * range));
-        obj.innerHTML = value + " gold";
+        obj.innerHTML = prettyPrint(value) + " gold";
         if (value == end) {
             clearInterval(timer);
         }
@@ -29,6 +29,11 @@ function rollNumbers(id, start, end, duration) {
 
     var timer = setInterval(run, stepTime);
     run();
+}
+
+/* Pretty print numbers (looks nicer) */
+function prettyPrint(val) {
+	return val.toLocaleString();
 }
 
 Game = {};
@@ -97,11 +102,11 @@ Game.Init = function() {
 			
 			gps = gps + 1.5;
 			document.getElementById("gps").value = gps;
-			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
+			document.getElementById("gps").innerHTML = prettyPrint(Math.round(gps * 100) / 100) + " gps";
 			
 			firstCost = firstCost * growth;
 			document.getElementById("cost1").value = firstCost;
-			document.getElementById("cost1").innerHTML = " " + firstCost;
+			document.getElementById("cost1").innerHTML = " " + prettyPrint(firstCost);
 			
 			numBranch++;
 			document.getElementById("numBranch").value = numBranch;
@@ -118,11 +123,11 @@ Game.Init = function() {
 			
 			gps = gps + 10.5;
 			document.getElementById("gps").value = gps;
-			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
+			document.getElementById("gps").innerHTML = prettyPrint(Math.round(gps * 100) / 100) + " gps";
 			
 			secondCost = secondCost * growth;
 			document.getElementById("cost2").value = secondCost;
-			document.getElementById("cost2").innerHTML = " " + secondCost;
+			document.getElementById("cost2").innerHTML = " " + prettyPrint(secondCost);
 			
 			numQuelling++;
 			document.getElementById("numQuelling").value = numQuelling;
@@ -139,11 +144,11 @@ Game.Init = function() {
 			
 			gps = gps + 100.5;
 			document.getElementById("gps").value = gps;
-			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
+			document.getElementById("gps").innerHTML = prettyPrint(Math.round(gps * 100) / 100) + " gps";
 			
 			thirdCost = thirdCost * growth;
 			document.getElementById("cost3").value = thirdCost;
-			document.getElementById("cost3").innerHTML = " " + thirdCost;
+			document.getElementById("cost3").innerHTML = " " + prettyPrint(thirdCost);
 			
 			numBoot++;
 			document.getElementById("numBoot").value = numBoot;
@@ -160,11 +165,11 @@ Game.Init = function() {
 			
 			gps = gps + 1000.5;
 			document.getElementById("gps").value = gps;
-			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
+			document.getElementById("gps").innerHTML = prettyPrint(Math.round(gps * 100) / 100) + " gps";
 			
 			fourthCost = fourthCost * growth;
 			document.getElementById("cost4").value = fourthCost;
-			document.getElementById("cost4").innerHTML = " " + fourthCost;
+			document.getElementById("cost4").innerHTML = " " + prettyPrint(fourthCost);
 			
 			numBottle++;
 			document.getElementById("numBottle").value = numBottle;
@@ -181,11 +186,11 @@ Game.Init = function() {
 			
 			gps = gps + 10000.5;
 			document.getElementById("gps").value = gps;
-			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
+			document.getElementById("gps").innerHTML = prettyPrint(Math.round(gps * 100) / 100) + " gps";
 			
 			fifthCost = fifthCost * growth;
 			document.getElementById("cost5").value = fifthCost;
-			document.getElementById("cost5").innerHTML = " " + fifthCost;
+			document.getElementById("cost5").innerHTML = " " + prettyPrint(fifthCost);
 			
 			numMorbid++;
 			document.getElementById("numMorbid").value = numMorbid;
