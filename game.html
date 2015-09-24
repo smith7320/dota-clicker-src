@@ -11,7 +11,7 @@
 	<!-- Custom CSS -->
 	<link href="customclicker.css" rel="stylesheet">
     
-	<title>Smash Clicker</title>
+	<title>Dota Clicker</title>
 
   </head>
   <body>
@@ -19,28 +19,46 @@
 	<div class="container-fluid">
 	<div class="row">
 		<div class="mainWindow col-md-4">
-			<p id="clicks" class="mainFont" value="0">0 clicks</p>
-			<p id="cps" class="mainFont" value="0.0">0.1 cps</p>
+			<p id="mmr" class="mainFont" value="0">0 MMR</p>
+			<p id="mmrps" class="mainFont" value="0.0">0.1 mmrps</p>
 			<img src='image/clicker.png' class="clickerImage" onClick="Game.increment()">
 		</div>
 		<div class="optionWindow col-md-4">
 		 <p>this will be a column</p>
 		</div>
 		<div class="buttonsWindow col-md-4">
-			<button id="buttonOptions" type="button" class="btn btn-default" onClick="Game.toggleButtonOptions()">
-				<i>Options</i>
+			<button id="buttonOptions" type="button" class="buttonOptions btn btn-default pull-right" onClick="Game.toggleButtonOptions()">
+				<i>More Details</i>
 			</button>
 			<button id="button1" type="button" class="btn btn-default btn-block" onclick="Game.firstButton()">
-				<i class="buttonFont">First Thing</i><br><img src='image/icon-currency.png'><p id="cost1" value="0"> 10</p>
+				<i class="buttonFont">Iron Branch</i><br><img src='image/icon-currency.png'><p id="cost1" value="0"> 10</p>
 			</button>
 			<div id="firstInfo">
-				Test
+				<i>You have <i class="numBranch">0</i> branches.</i>
 			</div>
 			<button id="button2" type="button" class="btn btn-default btn-block" onclick="Game.secondButton()">
-				<i class="buttonFont">Second Thing</i><br><img src='image/icon-currency.png'><p id="cost2" value="0"> 100</p>
+				<i class="buttonFont">Quelling Blade</i><br><img src='image/icon-currency.png'><p id="cost2" value="0"> 100</p>
 			</button>
 			<div id="secondInfo">
-				Test
+				<i>You have <i class="numQuelling">0</i> quelling blades.</i>
+			</div>
+			<button id="button3" type="button" class="btn btn-default btn-block" onclick="Game.thirdButton()">
+				<i class="buttonFont">Boots of Speed</i><br><img src='image/icon-currency.png'><p id="cost3" value="0"> 1000</p>
+			</button>
+			<div id="thirdInfo">
+				<i>You have <i class="numBoots">0</i> boots.</i>
+			</div>
+			<button id="button4" type="button" class="btn btn-default btn-block" onclick="Game.fourthButton()">
+				<i class="buttonFont">Bottle</i><br><img src='image/icon-currency.png'><p id="cost4" value="0"> 10000</p>
+			</button>
+			<div id="fourthInfo">
+				<i>You have <i class="numBottles">0</i> bottles.</i>
+			</div>
+			<button id="button5" type="button" class="btn btn-default btn-block" onclick="Game.fifthButton()">
+				<i class="buttonFont">Morbid Masks</i><br><img src='image/icon-currency.png'><p id="cost5" value="0"> 100000</p>
+			</button>
+			<div id="fifthInfo">
+				<i>You have <i class="numMorbid">0</i> morbid masks.</i>
 			</div>
 		</div>
 	</div>
@@ -49,6 +67,7 @@
 	<div class="footer">
 		<hr>
 		<a href="https://github.com/smith7320">Github</a>
+		<p>v0.1</p>
 	</div>
   
 	<!-- Bootstrap core JavaScript
