@@ -21,7 +21,7 @@ function rollNumbers(id, start, end, duration) {
         var now = new Date().getTime();
         var remaining = Math.max((endTime - now) / duration, 0);
         var value = Math.round(end - (remaining * range));
-        obj.innerHTML = value + " MMR";
+        obj.innerHTML = value + " gold";
         if (value == end) {
             clearInterval(timer);
         }
@@ -35,9 +35,9 @@ Game = {};
 
 Game.Init = function() {
 	/* Initialize vars */
-	var mmr = 0;
-	var totalmmr = 0;
-	var mmrps = 0.10;
+	var gold = 0;
+	var totalgold = 0;
+	var gps = 0.10;
 	var clickPower = 1;
 	var start = 0;
 	
@@ -51,47 +51,47 @@ Game.Init = function() {
 
 	
 	Game.increment = function() {
-		start = mmr;
-		mmr = mmr + clickPower;
-		document.getElementById("mmr").value = mmr;
-		rollNumbers("mmr", Math.floor(start), Math.floor(mmr), 100);
+		start = gold;
+		gold = gold + clickPower;
+		document.getElementById("gold").value = gold;
+		rollNumbers("gold", Math.floor(start), Math.floor(gold), 100);
 	}
 
 	Game.timedIncrement = function() {
-		start = mmr;
-		mmr = mmr + mmrps;
-		document.getElementById("mmr").value = mmr + mmrps;
-		rollNumbers("mmr", Math.floor(start), Math.floor(mmr), 300);
+		start = gold;
+		gold = gold + gps;
+		document.getElementById("gold").value = gold + gps;
+		rollNumbers("gold", Math.floor(start), Math.floor(gold), 300);
 	}
 	
 	/* Check whether buttons should be active based on cost */
 	Game.buttonCheck = function() {
-		if (mmr >= firstCost) { document.getElementById("button1").className = "btn btn-default btn-block"; } 
+		if (gold >= firstCost) { document.getElementById("button1").className = "btn btn-default btn-block"; } 
 		else { document.getElementById("button1").className = "btn btn-default btn-block disabled"; }
 		
-		if (mmr >= secondCost) { document.getElementById("button2").className = "btn btn-default btn-block"; } 
+		if (gold >= secondCost) { document.getElementById("button2").className = "btn btn-default btn-block"; } 
 		else { document.getElementById("button2").className = "btn btn-default btn-block disabled"; }
 		
-		if (mmr >= thirdCost) { document.getElementById("button3").className = "btn btn-default btn-block"; } 
+		if (gold >= thirdCost) { document.getElementById("button3").className = "btn btn-default btn-block"; } 
 		else { document.getElementById("button3").className = "btn btn-default btn-block disabled"; }
 		
-		if (mmr >= fourthCost) { document.getElementById("button4").className = "btn btn-default btn-block"; } 
+		if (gold >= fourthCost) { document.getElementById("button4").className = "btn btn-default btn-block"; } 
 		else { document.getElementById("button4").className = "btn btn-default btn-block disabled"; }
 		
-		if (mmr >= fifthCost) { document.getElementById("button5").className = "btn btn-default btn-block"; } 
+		if (gold >= fifthCost) { document.getElementById("button5").className = "btn btn-default btn-block"; } 
 		else { document.getElementById("button5").className = "btn btn-default btn-block disabled"; }
 	}
 
 	Game.firstButton = function() {
-		mmr, start = document.getElementById("mmr").value;
-		if (mmr >= firstCost) {
-			mmr = mmr - firstCost;
-			document.getElementById("mmr").value = mmr;
-			rollNumbers("mmr", Math.floor(start), Math.floor(mmr), 300);
+		gold, start = document.getElementById("gold").value;
+		if (gold >= firstCost) {
+			gold = gold - firstCost;
+			document.getElementById("gold").value = gold;
+			rollNumbers("gold", Math.floor(start), Math.floor(gold), 300);
 			
-			mmrps = mmrps + 1.5;
-			document.getElementById("mmrps").value = mmrps;
-			document.getElementById("mmrps").innerHTML = Math.round(mmrps * 100) / 100 + " mmrps";
+			gps = gps + 1.5;
+			document.getElementById("gps").value = gps;
+			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
 			
 			firstCost = firstCost * growth;
 			document.getElementById("cost1").value = firstCost;
@@ -100,15 +100,15 @@ Game.Init = function() {
 	}
 	
 	Game.secondButton = function() {
-		mmr, start = document.getElementById("mmr").value;
-		if (mmr >= secondCost) {
-			mmr = mmr - secondCost;
-			document.getElementById("mmr").value = mmr;
-			rollNumbers("mmr", Math.floor(start), Math.floor(mmr), 300);
+		gold, start = document.getElementById("gold").value;
+		if (gold >= secondCost) {
+			gold = gold - secondCost;
+			document.getElementById("gold").value = gold;
+			rollNumbers("gold", Math.floor(start), Math.floor(gold), 300);
 			
-			mmrps = mmrps + 10.5;
-			document.getElementById("mmrps").value = mmrps;
-			document.getElementById("mmrps").innerHTML = Math.round(mmrps * 100) / 100 + " mmrps";
+			gps = gps + 10.5;
+			document.getElementById("gps").value = gps;
+			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
 			
 			secondCost = secondCost * growth;
 			document.getElementById("cost2").value = secondCost;
@@ -117,15 +117,15 @@ Game.Init = function() {
 	}
 	
 	Game.thirdButton = function() {
-		mmr, start = document.getElementById("mmr").value;
-		if (mmr >= thirdCost) {
-			mmr = mmr - thirdCost;
-			document.getElementById("mmr").value = mmr;
-			rollNumbers("mmr", Math.floor(start), Math.floor(mmr), 300);
+		gold, start = document.getElementById("gold").value;
+		if (gold >= thirdCost) {
+			gold = gold - thirdCost;
+			document.getElementById("gold").value = gold;
+			rollNumbers("gold", Math.floor(start), Math.floor(gold), 300);
 			
-			mmrps = mmrps + 100.5;
-			document.getElementById("mmrps").value = mmrps;
-			document.getElementById("mmrps").innerHTML = Math.round(mmrps * 100) / 100 + " mmrps";
+			gps = gps + 100.5;
+			document.getElementById("gps").value = gps;
+			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
 			
 			thirdCost = thirdCost * growth;
 			document.getElementById("cost3").value = thirdCost;
@@ -134,15 +134,15 @@ Game.Init = function() {
 	}
 	
 	Game.fourthButton = function() {
-		mmr, start = document.getElementById("mmr").value;
-		if (mmr >= fourthCost) {
-			mmr = mmr - fourthCost;
-			document.getElementById("mmr").value = mmr;
-			rollNumbers("mmr", Math.floor(start), Math.floor(mmr), 300);
+		gold, start = document.getElementById("gold").value;
+		if (gold >= fourthCost) {
+			gold = gold - fourthCost;
+			document.getElementById("gold").value = gold;
+			rollNumbers("gold", Math.floor(start), Math.floor(gold), 300);
 			
-			mmrps = mmrps + 1000.5;
-			document.getElementById("mmrps").value = mmrps;
-			document.getElementById("mmrps").innerHTML = Math.round(mmrps * 100) / 100 + " mmrps";
+			gps = gps + 1000.5;
+			document.getElementById("gps").value = gps;
+			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
 			
 			fourthCost = fourthCost * growth;
 			document.getElementById("cost4").value = fourthCost;
@@ -151,15 +151,15 @@ Game.Init = function() {
 	}
 	
 	Game.fifthButton = function() {
-		mmr, start = document.getElementById("mmr").value;
-		if (mmr >= fifthCost) {
-			mmr = mmr - fifthCost;
-			document.getElementById("mmr").value = mmr;
-			rollNumbers("mmr", Math.floor(start), Math.floor(mmr), 300);
+		gold, start = document.getElementById("gold").value;
+		if (gold >= fifthCost) {
+			gold = gold - fifthCost;
+			document.getElementById("gold").value = gold;
+			rollNumbers("gold", Math.floor(start), Math.floor(gold), 300);
 			
-			mmrps = mmrps + 10000.5;
-			document.getElementById("mmrps").value = mmrps;
-			document.getElementById("mmrps").innerHTML = Math.round(mmrps * 100) / 100 + " mmrps";
+			gps = gps + 10000.5;
+			document.getElementById("gps").value = gps;
+			document.getElementById("gps").innerHTML = Math.round(gps * 100) / 100 + " gps";
 			
 			fifthCost = fifthCost * growth;
 			document.getElementById("cost5").value = fifthCost;
