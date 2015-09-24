@@ -47,6 +47,12 @@ Game.Init = function() {
 	var fourthCost = 10000;
 	var fifthCost = 100000;
 	
+	var numBranch = 0;
+	var numQuelling = 0;
+	var numBoot = 0;
+	var numBottle = 0;
+	var numMorbid = 0;
+	
 	var growth = 3;
 
 	
@@ -96,6 +102,10 @@ Game.Init = function() {
 			firstCost = firstCost * growth;
 			document.getElementById("cost1").value = firstCost;
 			document.getElementById("cost1").innerHTML = " " + firstCost;
+			
+			numBranch++;
+			document.getElementById("numBranch").value = numBranch;
+			document.getElementById("numBranch").innerHTML = numBranch;
 		}
 	}
 	
@@ -113,6 +123,10 @@ Game.Init = function() {
 			secondCost = secondCost * growth;
 			document.getElementById("cost2").value = secondCost;
 			document.getElementById("cost2").innerHTML = " " + secondCost;
+			
+			numQuelling++;
+			document.getElementById("numQuelling").value = numQuelling;
+			document.getElementById("numQuelling").innerHTML = numQuelling;
 		}
 	}
 	
@@ -130,6 +144,10 @@ Game.Init = function() {
 			thirdCost = thirdCost * growth;
 			document.getElementById("cost3").value = thirdCost;
 			document.getElementById("cost3").innerHTML = " " + thirdCost;
+			
+			numBoot++;
+			document.getElementById("numBoot").value = numBoot;
+			document.getElementById("numBoot").innerHTML = numBoot;
 		}
 	}
 	
@@ -147,6 +165,10 @@ Game.Init = function() {
 			fourthCost = fourthCost * growth;
 			document.getElementById("cost4").value = fourthCost;
 			document.getElementById("cost4").innerHTML = " " + fourthCost;
+			
+			numBottle++;
+			document.getElementById("numBottle").value = numBottle;
+			document.getElementById("numBottle").innerHTML = numBottle;
 		}
 	}
 	
@@ -164,6 +186,10 @@ Game.Init = function() {
 			fifthCost = fifthCost * growth;
 			document.getElementById("cost5").value = fifthCost;
 			document.getElementById("cost5").innerHTML = " " + fifthCost;
+			
+			numMorbid++;
+			document.getElementById("numMorbid").value = numMorbid;
+			document.getElementById("numMorbid").innerHTML = numMorbid;
 		}
 	}
 	
